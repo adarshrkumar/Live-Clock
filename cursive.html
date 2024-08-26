@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Clock</title>
+    <link rel="icon" href="favicon.png">
+    <link href="cursive.css" rel="stylesheet">
+  </head>
+  <body>
+  	<h1>Live Clock</h2>
+  	<p id="time">HH:MM:SS TT</p>
+    <button onclick="location.href='/'">
+      <b>Switch To Print</b>
+    </button>
+  	<script>
+  	  setInterval(myTimer, 1000);
+  	  
+  	  function myTimer() {
+  	  	const d = new Date();
+  	  	document.querySelector("#time").innerHTML = d.toLocaleTimeString();
+  	  }
+	</script>
+  </body>
+</html>
